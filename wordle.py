@@ -1,4 +1,8 @@
-word = "smart"
+import random
+
+words = ["smart", "broil", "amber", "plate", "quilt", "wreck", "clout", "vices"]
+
+word = random.choice(words)
 
 # colors
 default = '\033[0m'
