@@ -1,6 +1,6 @@
 import random
 
-words = ["smart", "broil", "amber", "plate", "quilt", "wreck", "clout", "vices"]
+words = ["smart", "broil", "amber", "plate", "quilt", "wreck", "clout", "vices", "night"]
 
 word = random.choice(words)
 
