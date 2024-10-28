@@ -29,5 +29,7 @@ def binaryToInt(binary):
            decimal += 2**i
     return decimal
 
-print(intToBinary(5))
-print(binaryToInt(101))
+integer = input("Choose an integer: ")
+binary = input("Give me a binary number: ")
+print(intToBinary(integer))
+print(binaryToInt(binary))
