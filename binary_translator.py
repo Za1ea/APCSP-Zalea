@@ -20,4 +20,14 @@ def intToBinary(integer):
     binary = ''.join([str(x) for x in binary_list])
     return binary
 
+def binaryToInt(binary):
+    decimal = 0
+    binary_list = list(str(binary))
+    reversed_binary = binary_list[::-1]
+    for i, bit in enumerate(reversed_binary):
+        if bit == '1':
+           decimal += 2**i
+    return decimal
+
 print(intToBinary(5))
+print(binaryToInt(101))
