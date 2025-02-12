@@ -20,7 +20,34 @@ def fetch_word(num):
 
     response = requests.get(url)
     word = response.json()[0]
+    # print(word)
     return word
 
+def replace_letters(word):
+    word = word[0].upper() + word[1:]
+    replace_letters_dict = {
+        "a": "@",
+        "e": "3",
+        "h": "#",
+        "i": "!",
+        "j": ";",
+        "l": "1",
+        "n": "^",
+        "o": "0",
+        "u": "v"
+    }
+    for (letter,replacement) in replace_letters_dict.items():
+        word = word.replace(letter, replacement)
+    # print(word)
+    return word
+
+def generate_weaker_password():
+    word1 = fetch_word(8)
+    word2 = fetch_word(6)
+    word1 = replace_letters(word1)
+    word2 = replace_letters(word2)
+    password = word1 + word2
+    print(password)
+
 generate_strong_password()
-print(fetch_word(5))
+generate_weaker_password()
